@@ -1,0 +1,12 @@
+@keyframes rollout {
+  0% {
+    transform: translateY(-34px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.roll-out {
+  animation: rollout 0.4s;
+}
