@@ -2,12 +2,14 @@ import { TabsExamplePage } from '@/components/TabsExamplePage.tsx';
 import { FlipResizePage } from '@/components/FlipResizePage';
 import HomePage from '@/components/HomePage';
 import { FlipOnClickPage } from '@/components/FlipOnClickPage';
-import { AddDelRowPage } from './components/AddDelRowPage';
-import { DelRowPage } from './components/DelRowPage';
-import { AddRowPage } from './components/AddRowPage';
-import { AddRowKeyFramePage } from './components/AddRowKeyFramePage/AddRowKeyFramePage';
-import { GsapDemo } from './components/GsapDemo/GsapDemo';
-import { GsapDemoCustom } from './components/GsapDemoCustom';
+import { AddDelRowPage } from '@/components/AddDelRowPage';
+import { DelRowPage } from '@/components/DelRowPage';
+import { AddRowPage } from '@/components/AddRowPage';
+import { AddRowKeyFramePage } from '@/components/AddRowKeyFramePage/AddRowKeyFramePage';
+import { GsapDemo } from '@/components/GsapDemo/GsapDemo';
+import { GsapDemoCustom } from '@/components/GsapDemoCustom';
+import { AddDelRowPage2 } from '@/components/AddDelRowPage2';
+import { AddDelRowPage3 } from './components/AddDelRowPage3';
 
 export const routes = [
   {
@@ -56,6 +58,18 @@ export const routes = [
     path: '/adddelrow',
     name: 'add / del row',
     element: <AddDelRowPage />,
+    inNav: true,
+  },
+  {
+    path: '/adddelrow2',
+    name: 'add / del row2',
+    element: <AddDelRowPage2 />,
+    inNav: true,
+  },
+  {
+    path: '/adddelrow3',
+    name: 'add / del row3',
+    element: <AddDelRowPage3 />,
     inNav: true,
   },
   {
