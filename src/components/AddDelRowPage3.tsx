@@ -24,7 +24,7 @@ const initialItems = new Array(10)
   .map((item, i) => ({ id: nanoid(), text: 'sometext ' + i, action: '' }));
 
 export function AddDelRowPage3() {
-  console.log('rerender AddDelRowPage');
+  console.log('1.rerender AddDelRowPage');
   const containerRef = useRef<HTMLUListElement | null>(null);
   const q = gsap.utils.selector(containerRef);
 
@@ -68,7 +68,7 @@ export function AddDelRowPage3() {
           return gsap.fromTo(
             elements,
             {
-              y: -40,
+              y: -50,
               // opacity: 1,
               // scale: 0,
             },
@@ -96,6 +96,7 @@ export function AddDelRowPage3() {
   );
 
   function delRow(id: string) {
+    console.log('func delRow');
     setData({
       state: null,
       items: data.items,
@@ -115,25 +116,33 @@ export function AddDelRowPage3() {
 
   return (
     <>
-      <p className='mb-3 whitespace-pre-wrap px-2'>{`Более сложный вариант`}</p>
+      <p className='mb-3 whitespace-pre-wrap px-2'>{`Более сложный вариант.
+В случае удаления сначала анимируется удаляемая строка без изменения useState.
+Замем удаляется item в useState и сохраняется Flip.state.
+Затем при ререндере выполняется Flip обновленного useState.
+В случае добавления строки просто добавляется item в useState, туда же сохраняется Flip.state. Затем при ререндере выполняется Flip обновленного useState. 
+ul надо обернуть еще в один div dp relative чтобы новые items появлялись не сверху дисплея а из верхней части элемента`}</p>
 
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
       <div className='relative'>
         <ul ref={containerRef} className='boxes flex flex-col overflow-hidden'>
-          {data.items.map((row) => (
-            <li
-              id={`box-${row.id}`}
-              key={row.id}
-              className={`box my-2 rounded-sm border bg-gray-200 px-2`}
-              onClick={() => {
-                delRow(row.id);
-              }}
-            >
-              {row.text}
-            </li>
-          ))}
+          {data.items.map((row) => {
+            console.log('render list map');
+            return (
+              <li
+                id={`box-${row.id}`}
+                key={row.id}
+                className={`box my-2 rounded-sm border bg-gray-200 px-2`}
+                onClick={() => {
+                  delRow(row.id);
+                }}
+              >
+                {row.text}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>

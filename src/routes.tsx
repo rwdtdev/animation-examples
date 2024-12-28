@@ -10,6 +10,7 @@ import { GsapDemo } from '@/components/GsapDemo/GsapDemo';
 import { GsapDemoCustom } from '@/components/GsapDemoCustom';
 import { AddDelRowPage2 } from '@/components/AddDelRowPage2';
 import { AddDelRowPage3 } from './components/AddDelRowPage3';
+import { AddDelRowPage4 } from './components/AddDelRowPage4';
 
 export const routes = [
   {
@@ -70,6 +71,12 @@ export const routes = [
     path: '/adddelrow3',
     name: 'add / del row3',
     element: <AddDelRowPage3 />,
+    inNav: true,
+  },
+  {
+    path: '/adddelrow4',
+    name: 'add / del row4',
+    element: <AddDelRowPage4 />,
     inNav: true,
   },
   {
