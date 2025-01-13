@@ -23,7 +23,7 @@ const initialItems = new Array(10)
   .fill(0)
   .map((item, i) => ({ id: nanoid(), text: 'sometext ' + i, action: '' }));
 
-export function AddDelRowPage3() {
+export function AddDelRow3Page() {
   console.log('1.rerender AddDelRowPage');
   const containerRef = useRef<HTMLUListElement | null>(null);
   const q = gsap.utils.selector(containerRef);

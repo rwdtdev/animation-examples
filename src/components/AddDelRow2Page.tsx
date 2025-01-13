@@ -4,7 +4,6 @@ import { Flip } from 'gsap/Flip';
 import { useRef, useState } from 'react';
 import { nanoid } from 'nanoid';
 import { Button } from './ui/button';
-import { ScrollArea } from './ui/scroll-area';
 
 gsap.registerPlugin(Flip);
 
@@ -22,7 +21,7 @@ const initialItems = new Array(10)
   .fill(0)
   .map((item, i) => ({ id: nanoid(), text: 'sometext ' + i }));
 
-export function AddDelRowPage4() {
+export function AddDelRow2Page() {
   console.log('rerender AddDelRowPage');
   const containerRef = useRef<HTMLUListElement | null>(null);
   const q = gsap.utils.selector(containerRef);
@@ -98,25 +97,23 @@ export function AddDelRowPage4() {
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
-      <ScrollArea>
-        <ul
-          ref={containerRef}
-          className='boxes flex flex-col overflow-hidden border-2 border-blue-500'
-        >
-          {data.items.map((row) => (
-            <li
-              id={`box-${row.id}`}
-              key={row.id}
-              className={`box my-2 rounded-sm border bg-gray-200 px-2`}
-              onClick={() => {
-                delRow(row.id);
-              }}
-            >
-              {row.text}
-            </li>
-          ))}
-        </ul>
-      </ScrollArea>
+      <ul
+        ref={containerRef}
+        className='boxes flex flex-col overflow-hidden border-2 border-blue-500'
+      >
+        {data.items.map((row) => (
+          <li
+            id={`box-${row.id}`}
+            key={row.id}
+            className={`box my-2 rounded-sm border bg-gray-200 px-2`}
+            onClick={() => {
+              delRow(row.id);
+            }}
+          >
+            {row.text}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

@@ -8,9 +8,9 @@ import { AddRowPage } from '@/components/AddRowPage';
 import { AddRowKeyFramePage } from '@/components/AddRowKeyFramePage/AddRowKeyFramePage';
 import { GsapDemo } from '@/components/GsapDemo/GsapDemo';
 import { GsapDemoCustom } from '@/components/GsapDemoCustom';
-import { AddDelRowPage2 } from '@/components/AddDelRowPage2';
-import { AddDelRowPage3 } from './components/AddDelRowPage3';
-import { AddDelRowPage4 } from './components/AddDelRowPage4';
+import { AddDelRow2Page } from '@/components/AddDelRow2Page';
+import { AddDelRow3Page } from './components/AddDelRow3Page';
+import { AddDelRow4Page } from './components/AddDelRow4Page';
 
 export const routes = [
   {
@@ -64,19 +64,19 @@ export const routes = [
   {
     path: '/adddelrow2',
     name: 'add / del row2',
-    element: <AddDelRowPage2 />,
+    element: <AddDelRow2Page />,
     inNav: true,
   },
   {
     path: '/adddelrow3',
     name: 'add / del row3',
-    element: <AddDelRowPage3 />,
+    element: <AddDelRow3Page />,
     inNav: true,
   },
   {
     path: '/adddelrow4',
     name: 'add / del row4',
-    element: <AddDelRowPage4 />,
+    element: <AddDelRow4Page />,
     inNav: true,
   },
   {
