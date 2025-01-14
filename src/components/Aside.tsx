@@ -32,11 +32,12 @@ export function Aside() {
       <nav>
         <ul>
           {routes.map((route) => (
-            <li key={route.path} className='text-nowrap'>
+            <li key={route.path} className='text-nowrap hover:bg-slate-300'>
               <NavLink
                 to={route.path}
                 className={({ isActive }) =>
-                  isActive ? 'text-red-500' : 'text-black'
+                  'inline-block w-full ' +
+                  (isActive ? 'bg-slate-300 font-semibold' : 'text-black')
                 }
               >
                 {route.name}

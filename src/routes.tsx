@@ -11,6 +11,9 @@ import { GsapDemoCustom } from '@/components/GsapDemoCustom';
 import { AddDelRow2Page } from '@/components/AddDelRow2Page';
 import { AddDelRow3Page } from './components/AddDelRow3Page';
 import { AddDelRow4Page } from './components/AddDelRow4Page';
+import { ReactTransitionPage } from './components/ReactTransitionPage';
+import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage/ReactTransitionGroupPage';
+import { ReactCSSTransition } from './components/ReactCSSTransition/ReactCSSTransition';
 
 export const routes = [
   {
@@ -89,6 +92,24 @@ export const routes = [
     path: '/gsapdemocustom',
     name: 'gsap demo custom',
     element: <GsapDemoCustom />,
+    inNav: true,
+  },
+  {
+    path: '/reacttransition',
+    name: 'react Transition',
+    element: <ReactTransitionPage />,
+    inNav: true,
+  },
+  {
+    path: '/reacttransitiongroup',
+    name: 'react Transition Group',
+    element: <ReactTransitionGroupPage />,
+    inNav: true,
+  },
+  {
+    path: '/reactcsstransition',
+    name: 'react CSSTransition ',
+    element: <ReactCSSTransition />,
     inNav: true,
   },
 ] as const;
