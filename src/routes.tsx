@@ -1,6 +1,5 @@
-import { TabsExamplePage } from '@/components/TabsExamplePage.tsx';
 import { FlipResizePage } from '@/components/FlipResizePage';
-import HomePage from '@/components/HomePage';
+import { HomePage } from '@/components/HomePage';
 import { FlipOnClickPage } from '@/components/FlipOnClickPage';
 import { AddDelRowPage } from '@/components/AddDelRowPage';
 import { DelRowPage } from '@/components/DelRowPage';
@@ -16,6 +15,9 @@ import { Motion2Page } from './components/Motion2Page';
 import { ReactTransitionPage } from './components/ReactTransitionPage';
 import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage';
 import { ReactCSSTransition } from './components/ReactCSSTransition';
+import { ReactFlipToolkit } from './components/ReactFlipToolkit';
+import { TabsReactFlipTool } from './components/TabsReactFlipTool';
+import { TabsGsapFlip } from './components/TabsGsapFlip';
 
 export const routes = [
   {
@@ -27,7 +29,13 @@ export const routes = [
   {
     path: '/tabs',
     name: 'Tabs gsap Flip example',
-    element: <TabsExamplePage />,
+    element: <TabsGsapFlip />,
+    inNav: true,
+  },
+  {
+    path: '/tabsreactfliptool',
+    name: 'TabsReactFlipTool ',
+    element: <TabsReactFlipTool />,
     inNav: true,
   },
   {
@@ -124,6 +132,12 @@ export const routes = [
     path: '/reactcsstransition',
     name: 'react CSSTransition ',
     element: <ReactCSSTransition />,
+    inNav: true,
+  },
+  {
+    path: '/reactfliptoolkit',
+    name: 'ReactFlipToolkit ',
+    element: <ReactFlipToolkit />,
     inNav: true,
   },
 ] as const;
