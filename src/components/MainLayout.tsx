@@ -12,7 +12,7 @@ export function MainLayout() {
         <main className='flex grow flex-col overflow-hidden border border-green-500 p-2'>
           <Outlet />
         </main>
-        <footer className='z-10 bg-white'>footer</footer>
+        <footer className='border-2 text-center'>footer</footer>
       </div>
     </div>
   );

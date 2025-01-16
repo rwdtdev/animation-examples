@@ -89,8 +89,8 @@ export function AddDelRow2Page() {
     });
   }
 
-  const scroll = contextSafe(() => {
-    console.log('scroll');
+  const scrollAndAdd = contextSafe(() => {
+    console.log('scrollAndAdd');
     gsap.to('.boxes', { scrollTo: 0 }).then(() => {
       setData({
         state: Flip.getState(q('.box')),
@@ -110,11 +110,11 @@ export function AddDelRow2Page() {
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
-      <Button onClick={scroll}>scroll</Button>
+      <Button onClick={scrollAndAdd}>scrollAndAdd</Button>
 
       <ul
         ref={containerRef}
-        className='boxes flex flex-col overflow-scroll border-2 border-blue-500'
+        className='boxes flex flex-col overflow-y-scroll border-2 border-blue-500'
       >
         {data.items.map((row) => (
           <li

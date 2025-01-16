@@ -116,13 +116,16 @@ export function GsapDemoCustom() {
   };
 
   return (
-    <div className='app text-center' ref={el}>
+    <div
+      className='app flex flex-col overflow-hidden border border-fuchsia-600 text-center'
+      ref={el}
+    >
       <div>
         <Button className='button mb-3' onClick={addItem}>
           Add Box
         </Button>
       </div>
-      <div className='boxes flex flex-row flex-wrap'>
+      <div className='boxes flex flex-row flex-wrap overflow-y-scroll border border-blue-600'>
         {layout.items.map((item) => {
           console.log('render list');
           return (

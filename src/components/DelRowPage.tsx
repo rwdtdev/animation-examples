@@ -38,7 +38,7 @@ export function DelRowPage() {
   return (
     <>
       <span>c Flip в данном случае нет смысла делать </span>
-      <ul ref={refGroup} className='group overflow-hidden'>
+      <ul ref={refGroup} className='group overflow-y-scroll'>
         {data.map((row) => (
           <li
             key={row.id}
