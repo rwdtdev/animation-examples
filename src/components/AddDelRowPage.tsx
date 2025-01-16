@@ -122,7 +122,7 @@ export function AddDelRowPage() {
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
-      <ul ref={containerRef} className='boxes flex flex-col overflow-hidden'>
+      <ul ref={containerRef} className='boxes flex flex-col overflow-y-scroll'>
         {data.items.map((row) => (
           <li
             id={`box-${row.id}`}

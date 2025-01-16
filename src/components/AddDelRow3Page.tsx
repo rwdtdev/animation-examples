@@ -126,8 +126,11 @@ ul надо обернуть еще в один div dp relative чтобы но�
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
-      <div className='relative'>
-        <ul ref={containerRef} className='boxes flex flex-col overflow-hidden'>
+      <div className='relative flex flex-grow flex-col overflow-x-hidden overflow-y-scroll border border-red-600'>
+        <ul
+          ref={containerRef}
+          className='boxes flex flex-col border border-blue-600'
+        >
           {data.items.map((row) => {
             console.log('render list map');
             return (

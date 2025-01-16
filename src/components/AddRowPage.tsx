@@ -26,11 +26,10 @@ export function AddRowPage() {
 
   return (
     <>
-      нужно обновлять key у строки каждый раз чтобы применился @keyframes
       <Button className='m-1' onClick={addRow}>
         add row2
       </Button>
-      <ul ref={refGroup} className='group overflow-hidden'>
+      <ul ref={refGroup} className='group overflow-y-scroll'>
         {data.map((row) => (
           <li
             key={row.id}

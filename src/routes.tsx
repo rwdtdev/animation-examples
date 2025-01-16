@@ -11,6 +11,8 @@ import { GsapDemoCustom } from '@/components/GsapDemoCustom';
 import { AddDelRow2Page } from '@/components/AddDelRow2Page';
 import { AddDelRow3Page } from './components/AddDelRow3Page';
 import { AddDelRow4Page } from './components/AddDelRow4Page';
+import { Motion1Page } from './components/Motion1Page';
+import { Motion2Page } from './components/Motion2Page';
 import { ReactTransitionPage } from './components/ReactTransitionPage';
 import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage/ReactTransitionGroupPage';
 import { ReactCSSTransition } from './components/ReactCSSTransition/ReactCSSTransition';
@@ -24,37 +26,37 @@ export const routes = [
   },
   {
     path: '/tabs',
-    name: 'Tabs Flip example',
+    name: 'Tabs gsap Flip example',
     element: <TabsExamplePage />,
     inNav: true,
   },
   {
     path: '/flip-resize',
-    name: 'Flip on resize',
+    name: 'on resize gsap Flip',
     element: <FlipResizePage />,
     inNav: true,
   },
   {
     path: '/flip-onclick',
-    name: 'Flip on click',
+    name: 'on click gsap Flip',
     element: <FlipOnClickPage />,
     inNav: true,
   },
   {
     path: '/delrow',
-    name: 'del row',
+    name: 'del row gsap',
     element: <DelRowPage />,
     inNav: true,
   },
   {
     path: '/addrow',
-    name: 'add row ',
+    name: 'add row gsap',
     element: <AddRowPage />,
     inNav: true,
   },
   {
     path: '/addrowkeyframe',
-    name: 'add row key frame',
+    name: 'keyframes add row ',
     element: <AddRowKeyFramePage />,
     inNav: true,
   },
@@ -92,6 +94,18 @@ export const routes = [
     path: '/gsapdemocustom',
     name: 'gsap demo custom',
     element: <GsapDemoCustom />,
+    inNav: true,
+  },
+  {
+    path: '/motionone',
+    name: 'motion dnd add/del row',
+    element: <Motion1Page />,
+    inNav: true,
+  },
+  {
+    path: '/motiontwo',
+    name: 'motion add/del row',
+    element: <Motion2Page />,
     inNav: true,
   },
   {

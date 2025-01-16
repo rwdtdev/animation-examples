@@ -47,7 +47,7 @@ export function FlipOnClickPage() {
       <ul
         ref={refGroup}
         // className={`group ${isDpBlock.current ? 'block' : 'flex flex-wrap'}`}
-        className={`group block`}
+        className='group overflow-y-scroll'
       >
         {items.map((item) => (
           <li

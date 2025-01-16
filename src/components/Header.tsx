@@ -6,7 +6,7 @@ export function Header() {
   const route = routes.find((route) => route.path === location.pathname);
   return (
     <header className='border p-2 text-3xl font-bold'>
-      gsap {route?.name}
+      Animations | {route?.name}
     </header>
   );
 }

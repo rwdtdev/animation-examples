@@ -1,12 +1,13 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Flip } from 'gsap/Flip';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { useRef, useState } from 'react';
 import { nanoid } from 'nanoid';
 import { Button } from './ui/button';
 
 gsap.registerPlugin(Flip);
-
+gsap.registerPlugin(ScrollToPlugin);
 type Item = {
   id: string;
   text: string;
@@ -31,10 +32,12 @@ export function AddDelRow2Page() {
     state: undefined,
   });
 
-  useGSAP(
+  const { contextSafe } = useGSAP(
     () => {
       console.log('useGSAP');
       if (!data.state) return;
+
+      gsap.to(containerRef, { duration: 2, scrollTo: 0 });
 
       Flip.from(data.state, {
         absolute: true,
@@ -86,6 +89,16 @@ export function AddDelRow2Page() {
     });
   }
 
+  const scrollAndAdd = contextSafe(() => {
+    console.log('scrollAndAdd');
+    gsap.to('.boxes', { scrollTo: 0 }).then(() => {
+      setData({
+        state: Flip.getState(q('.box')),
+        items: [{ id: nanoid(), text: 'sometext' + nanoid() }, ...data.items],
+      });
+    });
+  });
+
   return (
     <>
       <p className='mb-3 whitespace-pre-wrap px-2'>
@@ -97,9 +110,11 @@ export function AddDelRow2Page() {
       <Button onClick={addRow} className='z-10 mb-2'>
         add row
       </Button>
+      <Button onClick={scrollAndAdd}>scrollAndAdd</Button>
+
       <ul
         ref={containerRef}
-        className='boxes flex flex-col overflow-hidden border-2 border-blue-500'
+        className='boxes flex flex-col overflow-y-scroll border-2 border-blue-500'
       >
         {data.items.map((row) => (
           <li

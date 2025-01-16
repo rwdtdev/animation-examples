@@ -4,7 +4,8 @@ import { Flip } from 'gsap/Flip';
 import React from 'react';
 import { Button } from '../ui/button';
 import { nanoid } from 'nanoid';
-import './animate.css';
+// import './animate.css';
+import classes from './animate.module.css';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(Flip);
@@ -24,13 +25,14 @@ export function AddRowKeyFramePage() {
 
   return (
     <>
+      нужно обновлять key у строки каждый раз чтобы применился @keyframes
       <Button onClick={addRow}>add row</Button>
-
-      <ul className='group overflow-hidden'>
+      <ul className='group overflow-y-scroll'>
         {data.map((row, i) => (
           <li
             key={row.id + String(i)}
-            className='box roll-out overflow-hidden'
+            // className='box roll-out overflow-hidden'
+            className={`box overflow-hidden ${classes.rollOut}`}
             ref={(node) => {
               if (itemsRef.current && node)
                 itemsRef.current.push({ id: row.id, node: node });
