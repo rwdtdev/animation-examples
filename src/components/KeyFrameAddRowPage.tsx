@@ -2,10 +2,9 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Flip } from 'gsap/Flip';
 import React from 'react';
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 import { nanoid } from 'nanoid';
-// import './animate.css';
-import classes from './animate.module.css';
+import classes from './KeyFrameAddRowPage.module.css';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(Flip);
@@ -14,7 +13,7 @@ const initiallyData = new Array(10)
   .fill(0)
   .map((item, i) => ({ id: String(i), text: 'sometext ' + i }));
 
-export function AddRowKeyFramePage() {
+export function KeyFrameAddRowPage() {
   console.log('rerender DelRowPage');
   const [data, setData] = React.useState(initiallyData);
   const itemsRef = React.useRef<{ id: string; node: HTMLLIElement }[]>([]);

@@ -1,8 +1,8 @@
-import React, { useCallback, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Flip } from 'gsap/Flip';
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 let count = 0;
 
 gsap.registerPlugin(Flip);

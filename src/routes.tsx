@@ -5,8 +5,8 @@ import { FlipOnClickPage } from '@/components/FlipOnClickPage';
 import { AddDelRowPage } from '@/components/AddDelRowPage';
 import { DelRowPage } from '@/components/DelRowPage';
 import { AddRowPage } from '@/components/AddRowPage';
-import { AddRowKeyFramePage } from '@/components/AddRowKeyFramePage/AddRowKeyFramePage';
-import { GsapDemo } from '@/components/GsapDemo/GsapDemo';
+import { KeyFrameAddRowPage } from '@/components/KeyFrameAddRowPage';
+import { GsapDemo } from '@/components/GsapDemo';
 import { GsapDemoCustom } from '@/components/GsapDemoCustom';
 import { AddDelRow2Page } from '@/components/AddDelRow2Page';
 import { AddDelRow3Page } from './components/AddDelRow3Page';
@@ -14,8 +14,8 @@ import { AddDelRow4Page } from './components/AddDelRow4Page';
 import { Motion1Page } from './components/Motion1Page';
 import { Motion2Page } from './components/Motion2Page';
 import { ReactTransitionPage } from './components/ReactTransitionPage';
-import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage/ReactTransitionGroupPage';
-import { ReactCSSTransition } from './components/ReactCSSTransition/ReactCSSTransition';
+import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage';
+import { ReactCSSTransition } from './components/ReactCSSTransition';
 
 export const routes = [
   {
@@ -57,7 +57,7 @@ export const routes = [
   {
     path: '/addrowkeyframe',
     name: 'keyframes add row ',
-    element: <AddRowKeyFramePage />,
+    element: <KeyFrameAddRowPage />,
     inNav: true,
   },
   {

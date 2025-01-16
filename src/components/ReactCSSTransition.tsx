@@ -2,29 +2,28 @@ import React, { useState, useRef } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 
-import './styles.css';
-import { Button } from '../ui/button';
+import './ReactCSSTransition.css';
+import { Button } from './ui/button';
 import { Alert, AlertTitle } from '@/components/ui/alert';
 
 export function ReactCSSTransition() {
-  const [showButton, setShowButton] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
   const nodeRef = useRef(null);
   return (
     <div style={{ paddingTop: '2rem' }}>
-      {showButton && (
-        <Button onClick={() => setShowMessage(true)} size='lg'>
+      {
+        <Button onClick={() => setShowMessage(!showMessage)} size='lg'>
           Show Message
         </Button>
-      )}
+      }
       <CSSTransition
         in={showMessage}
         nodeRef={nodeRef}
         timeout={300}
-        classNames='alert'
+        classNames='alert-1'
         unmountOnExit
-        onEnter={() => setShowButton(false)}
-        onExited={() => setShowButton(true)}
+        onEnter={() => console.log('transition onEnter')}
+        onExited={() => console.log('transition onExited')}
       >
         <Alert ref={nodeRef}>
           <AlertTitle>Animated alert message</AlertTitle>
@@ -32,6 +31,7 @@ export function ReactCSSTransition() {
           <Button onClick={() => setShowMessage(false)}>Close</Button>
         </Alert>
       </CSSTransition>
+      <div>lkajsd</div>
     </div>
   );
 }

@@ -1,11 +1,8 @@
-import React, { useState, createRef } from 'react';
-
-// import { Container, ListGroup, Button } from 'react-bootstrap';
+import { useState, createRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import './ReactTransitionGroupPage.css';
 import { nanoid } from 'nanoid';
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 
 export function ReactTransitionGroupPage() {
   const [items, setItems] = useState(() => [
