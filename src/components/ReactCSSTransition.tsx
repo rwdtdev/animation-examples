@@ -13,7 +13,7 @@ export function ReactCSSTransition() {
     <div style={{ paddingTop: '2rem' }}>
       {
         <Button onClick={() => setShowMessage(!showMessage)} size='lg'>
-          Show Message
+          {showMessage ? 'Close' : 'Show'} Message
         </Button>
       }
       <CSSTransition
