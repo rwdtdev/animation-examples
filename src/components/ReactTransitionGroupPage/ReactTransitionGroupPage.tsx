@@ -12,22 +12,22 @@ export function ReactTransitionGroupPage() {
     {
       id: nanoid(),
       text: 'Buy eggs',
-      nodeRef: createRef<CSSTransition<HTMLLIElement> | undefined>(),
+      nodeRef: createRef<HTMLLIElement>(),
     },
     {
       id: nanoid(),
       text: 'Pay bills',
-      nodeRef: createRef<CSSTransition<HTMLLIElement>>(),
+      nodeRef: createRef<HTMLLIElement>(),
     },
     {
       id: nanoid(),
       text: 'Invite friends over',
-      nodeRef: createRef<CSSTransition<HTMLLIElement>>(),
+      nodeRef: createRef<HTMLLIElement>(),
     },
     {
       id: nanoid(),
       text: 'Fix the TV',
-      nodeRef: createRef<CSSTransition<HTMLLIElement>>(),
+      nodeRef: createRef<HTMLLIElement>(),
     },
   ]);
   return (

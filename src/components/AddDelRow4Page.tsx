@@ -4,7 +4,6 @@ import { Flip } from 'gsap/Flip';
 import { useRef, useState } from 'react';
 import { nanoid } from 'nanoid';
 import { Button } from './ui/button';
-import { ScrollArea } from './ui/scroll-area';
 
 gsap.registerPlugin(Flip);
 
