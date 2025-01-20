@@ -18,6 +18,10 @@ import { ReactCSSTransition } from './components/ReactCSSTransition';
 import { ReactFlipToolkit } from './components/ReactFlipToolkit';
 import { TabsReactFlipTool } from './components/TabsReactFlipTool';
 import { TabsGsapFlip } from './components/TabsGsapFlip';
+import { ReactFlipToolkit2 } from './components/ReactFlipToolkit2';
+import { ReactFlipToolkit3 } from './components/ReactFlipToolkit3';
+import { ReactFlipToolkit4 } from './components/ReactFlipToolkit4';
+import { ReactFlipToolkit5 } from './components/ReactFlipToolkit5';
 
 export const routes = [
   {
@@ -34,7 +38,7 @@ export const routes = [
   },
   {
     path: '/tabsreactfliptool',
-    name: 'TabsReactFlipTool ',
+    name: 'Tabs ReactFlipTool !!! ',
     element: <TabsReactFlipTool />,
     inNav: true,
   },
@@ -138,6 +142,30 @@ export const routes = [
     path: '/reactfliptoolkit',
     name: 'ReactFlipToolkit ',
     element: <ReactFlipToolkit />,
+    inNav: true,
+  },
+  {
+    path: '/reactfliptoolkit2',
+    name: 'ReactFlipToolkit-2 example ',
+    element: <ReactFlipToolkit2 />,
+    inNav: true,
+  },
+  {
+    path: '/reactfliptoolkit3',
+    name: 'ReactFlipToolkit-3 ',
+    element: <ReactFlipToolkit3 />,
+    inNav: true,
+  },
+  {
+    path: '/reactfliptoolkit4',
+    name: 'ReactFlipToolkit-4 ',
+    element: <ReactFlipToolkit4 />,
+    inNav: true,
+  },
+  {
+    path: '/reactfliptoolkit5',
+    name: 'ReactFlipToolkit-5 !!!',
+    element: <ReactFlipToolkit5 />,
     inNav: true,
   },
 ] as const;
