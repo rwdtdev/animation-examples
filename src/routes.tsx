@@ -22,6 +22,7 @@ import { ReactFlipToolkit2 } from './components/ReactFlipToolkit2';
 import { ReactFlipToolkit3 } from './components/ReactFlipToolkit3';
 import { ReactFlipToolkit4 } from './components/ReactFlipToolkit4';
 import { ReactFlipToolkit5 } from './components/ReactFlipToolkit5';
+import { SpinnerPage } from './components/SpinnerPage';
 
 export const routes = [
   {
@@ -166,6 +167,12 @@ export const routes = [
     path: '/reactfliptoolkit5',
     name: 'ReactFlipToolkit-5 !!!',
     element: <ReactFlipToolkit5 />,
+    inNav: true,
+  },
+  {
+    path: '/spinner',
+    name: 'Spinner',
+    element: <SpinnerPage />,
     inNav: true,
   },
 ] as const;

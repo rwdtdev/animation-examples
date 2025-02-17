@@ -51,6 +51,20 @@ export default {
           5: 'hsl(var(--chart-5))',
         },
       },
+      animation: {
+        spinner1: 'spinner2 1.25s linear infinite',
+      },
+      keyframes: {
+        spinner2: {
+          '0%': { opacity: '1' },
+          '10%': { opacity: '0.7' },
+          '20%': { opacity: '0.5' },
+          '35%': { opacity: '0.3' },
+          '50%': { opacity: '0.2' },
+          '75%': { opacity: '0.1' },
+          '100%': { opacity: '0' },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
