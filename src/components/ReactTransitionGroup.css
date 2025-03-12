@@ -1,0 +1,23 @@
+.item-c9R8l-enter {
+  opacity: 0;
+  height: 0px;
+}
+.item-c9R8l-enter-active {
+  opacity: 1;
+  height: 32px;
+
+  transition:
+    height 500ms ease,
+    opacity 1000ms ease;
+}
+.item-c9R8l-exit {
+  opacity: 1;
+  height: 32px;
+}
+.item-c9R8l-exit-active {
+  opacity: 0;
+  height: 0px;
+  transition:
+    height 500ms ease,
+    opacity 500ms ease-in;
+}

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 
-import './ReactCSSTransition.css';
+import './reactCSSTransition.css';
 import { Button } from './ui/button';
 import { Alert, AlertTitle } from '@/components/ui/alert';
 

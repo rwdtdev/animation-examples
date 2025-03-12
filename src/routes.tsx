@@ -13,7 +13,7 @@ import { AddDelRow4Page } from './components/AddDelRow4Page';
 import { Motion1Page } from './components/Motion1Page';
 import { Motion2Page } from './components/Motion2Page';
 import { ReactTransitionPage } from './components/ReactTransitionPage';
-import { ReactTransitionGroupPage } from './components/ReactTransitionGroupPage';
+import { ReactTransitionGroup } from './components/ReactTransitionGroup';
 import { ReactCSSTransition } from './components/ReactCSSTransition';
 import { ReactFlipToolkit } from './components/ReactFlipToolkit';
 import { TabsReactFlipTool } from './components/TabsReactFlipTool';
@@ -23,6 +23,7 @@ import { ReactFlipToolkit3 } from './components/ReactFlipToolkit3';
 import { ReactFlipToolkit4 } from './components/ReactFlipToolkit4';
 import { ReactFlipToolkit5 } from './components/ReactFlipToolkit5';
 import { SpinnerPage } from './components/SpinnerPage';
+import { ReactCSSTransition2 } from './components/ReactCSSTransition2';
 
 export const routes = [
   {
@@ -121,6 +122,7 @@ export const routes = [
     element: <Motion2Page />,
     inNav: true,
   },
+
   {
     path: '/reacttransition',
     name: 'react Transition',
@@ -130,13 +132,19 @@ export const routes = [
   {
     path: '/reacttransitiongroup',
     name: 'react Transition Group',
-    element: <ReactTransitionGroupPage />,
+    element: <ReactTransitionGroup />,
     inNav: true,
   },
   {
     path: '/reactcsstransition',
     name: 'react CSSTransition ',
     element: <ReactCSSTransition />,
+    inNav: true,
+  },
+  {
+    path: '/reactcsstransition2',
+    name: 'react CSSTransition2 ',
+    element: <ReactCSSTransition2 />,
     inNav: true,
   },
   {
