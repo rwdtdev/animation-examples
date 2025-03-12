@@ -65,6 +65,9 @@ export default {
           '100%': { opacity: '0' },
         },
       },
+      transitionProperty: {
+        height: 'height',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

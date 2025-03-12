@@ -24,6 +24,9 @@ import { ReactFlipToolkit4 } from './components/ReactFlipToolkit4';
 import { ReactFlipToolkit5 } from './components/ReactFlipToolkit5';
 import { SpinnerPage } from './components/SpinnerPage';
 import { ReactCSSTransition2 } from './components/ReactCSSTransition2';
+import { Motion3Page } from './components/Motion3Page';
+import { TailwindBtnAnimation } from './components/TailwindBtnAnimation';
+import { TailwindListAnimations } from './components/TailwindListAnimations';
 
 export const routes = [
   {
@@ -122,6 +125,12 @@ export const routes = [
     element: <Motion2Page />,
     inNav: true,
   },
+  {
+    path: '/motionthree',
+    name: 'motion-3',
+    element: <Motion3Page />,
+    inNav: true,
+  },
 
   {
     path: '/reacttransition',
@@ -181,6 +190,18 @@ export const routes = [
     path: '/spinner',
     name: 'Spinner',
     element: <SpinnerPage />,
+    inNav: true,
+  },
+  {
+    path: '/tailwindbtnanimations',
+    name: 'Tailwind Btn Animations',
+    element: <TailwindBtnAnimation />,
+    inNav: true,
+  },
+  {
+    path: '/tTailwindlistanimations',
+    name: 'Tailwind List Animations',
+    element: <TailwindListAnimations />,
     inNav: true,
   },
 ] as const;
