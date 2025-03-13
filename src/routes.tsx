@@ -30,6 +30,8 @@ import { TailwindListAnimations } from './components/TailwindListAnimations';
 import { TailwindListAnimations2 } from './components/TailwindListAnimations2';
 import { TailwindListAnimations3 } from './components/TailwindListAnimations3';
 import { TailwindListAnimations4 } from './components/TailwindListAnimations4';
+import { DraggableDiv } from './components/DraggableDiv';
+import { DndKit } from './components/DndKit';
 
 export const routes = [
   {
@@ -223,6 +225,18 @@ export const routes = [
     path: '/TailwindListAnimations4',
     name: 'Tailwind List Animations 4',
     element: <TailwindListAnimations4 />,
+    inNav: true,
+  },
+  {
+    path: '/DraggableDiv',
+    name: 'Draggable Div',
+    element: <DraggableDiv />,
+    inNav: true,
+  },
+  {
+    path: '/DndKit',
+    name: 'DnD Kit',
+    element: <DndKit />,
     inNav: true,
   },
 ] as const;
