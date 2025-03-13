@@ -27,6 +27,9 @@ import { ReactCSSTransition2 } from './components/ReactCSSTransition2';
 import { Motion3Page } from './components/Motion3Page';
 import { TailwindBtnAnimation } from './components/TailwindBtnAnimation';
 import { TailwindListAnimations } from './components/TailwindListAnimations';
+import { TailwindListAnimations2 } from './components/TailwindListAnimations2';
+import { TailwindListAnimations3 } from './components/TailwindListAnimations3';
+import { TailwindListAnimations4 } from './components/TailwindListAnimations4';
 
 export const routes = [
   {
@@ -202,6 +205,24 @@ export const routes = [
     path: '/tTailwindlistanimations',
     name: 'Tailwind List Animations',
     element: <TailwindListAnimations />,
+    inNav: true,
+  },
+  {
+    path: '/TailwindListAnimations2',
+    name: 'Tailwind List Animations 2',
+    element: <TailwindListAnimations2 />,
+    inNav: true,
+  },
+  {
+    path: '/TailwindListAnimations3',
+    name: 'Tailwind List Animations 3',
+    element: <TailwindListAnimations3 />,
+    inNav: true,
+  },
+  {
+    path: '/TailwindListAnimations4',
+    name: 'Tailwind List Animations 4',
+    element: <TailwindListAnimations4 />,
     inNav: true,
   },
 ] as const;

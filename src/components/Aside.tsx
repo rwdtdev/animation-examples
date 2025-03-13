@@ -24,7 +24,7 @@ export function Aside() {
   return (
     <aside
       ref={refAside}
-      className={`aside w-[200px] shrink-0 grow-0 overflow-hidden border border-x-8 border-blue-500 border-x-white bg-white py-2`}
+      className={`aside w-[250px] shrink-0 grow-0 overflow-hidden border border-x-8 border-blue-500 border-x-white bg-white py-2`}
     >
       <button className='truncate' onClick={onResizeBtnClick}>
         resize SideBar

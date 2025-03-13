@@ -4,40 +4,29 @@ import { twJoin } from 'tailwind-merge';
 import { Button } from './ui/button';
 import { delay } from '@/lib/delay';
 
-export function TailwindListAnimations() {
+export function TailwindListAnimations2() {
   const [list, setList] = useState(
     new Array(10).fill(null).map(() => nanoid()),
   );
+
+  const [animate, setAnimate] = useState(false);
   return (
     <>
       <h1 className='mb-3'>Tailwind List Animations</h1>
-      <p>
-        для удаления строк в tailwind.config.js надо добавить:
-        {`theme: {
-        ...
-        extend: {
-            ...
-            transitionProperty: {
-                'height': 'height'
-            },
-        },
-    },`}
-      </p>
-      <p className='mb-3'>in tailwind-4 it isn`t necessary</p>
-      <p>для добавления строк в tailwind.config.js : </p>
+      <p>в tailwind.config.js надо добавить</p>
       <pre>
-        {` 
-    animation: {
-    'addrow-y5PGF': 'height2 1.25s linear ',
-    },
-    
-  keyframes: {
-    height2: {
-      '0%': { height: '0' },
-      '100%': { height: '10' },
-    },
+        {`keyframes: {
+  moveright: {
+    '0%': { left: '0%' },
+    '100%': { left: '100%' },
+  },
+},
+
+animation: {
+  'moveright-BPigm': 'moveright 1.25s linear ',
   },`}
       </pre>
+      <p className='mb-3'>in tailwind-4 it isn`t necessary</p>
 
       <Button
         onClick={() => {
@@ -67,16 +56,23 @@ function ListItem({
   return (
     <li
       className={twJoin(
-        'animate-addrow-y5PGF overflow-hidden border transition-[height] duration-300',
+        'animate-addrow-y5PGF relative overflow-hidden border duration-300',
         isSelected ? 'h-0 border-none' : 'h-10',
       )}
       onClick={async () => {
         setIsSelected((st) => !st);
-        await delay(300);
+        await delay(500);
         setList((st) => st.filter((item) => item !== data));
       }}
     >
-      {data}
+      <div
+        className={twJoin(
+          'absolute',
+          isSelected && 'animate-moveright-BPigm duration-500',
+        )}
+      >
+        {data}
+      </div>
     </li>
   );
 }

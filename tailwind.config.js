@@ -52,7 +52,10 @@ export default {
         },
       },
       animation: {
-        spinner1: 'spinner2 1.25s linear infinite',
+        'spinner-FBXaB': 'spinner2 1.25s linear infinite',
+        'addrow-y5PGF': 'heightInc 1.25s linear ',
+        'height-dec-10-0': 'heightDec 1.25s linear ',
+        'moveright-BPigm': 'moveright 1.25s linear ',
       },
       keyframes: {
         spinner2: {
@@ -64,9 +67,22 @@ export default {
           '75%': { opacity: '0.1' },
           '100%': { opacity: '0' },
         },
+        heightInc: {
+          '0%': { height: '0' },
+          '100%': { height: '10' },
+        },
+        heightDec: {
+          '0%': { height: '10' },
+          '100%': { height: '0' },
+        },
+        moveright: {
+          '0%': { left: '0%' },
+          '100%': { left: '100%' },
+        },
       },
       transitionProperty: {
         height: 'height',
+        left: 'left',
       },
     },
   },
